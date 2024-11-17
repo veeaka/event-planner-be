@@ -128,7 +128,7 @@ def test_partial_update_event(api_client, past_event):
 
 @pytest.mark.django_db
 def test_delete_event(api_client, past_event):
-    """Test deleting an event now"""
+    """Test deleting an event."""
     url = reverse("event-detail", kwargs={"pk": past_event.id})
     response = api_client.delete(url)
     assert response.status_code == status.HTTP_204_NO_CONTENT
