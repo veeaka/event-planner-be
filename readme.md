@@ -34,10 +34,15 @@ create database event_planner_db
 ```bash
 sudo docker-compose down
 ```
-
-### additionally 
+ 
 #### cmd to create superuser
 
 ```bash
 docker-compose exec web python manage.py createsuperuser
+```
+
+
+## command to run tests cases locally
+```bash
+pytest
 ```
