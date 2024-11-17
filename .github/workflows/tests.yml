@@ -42,11 +42,13 @@ jobs:
       - name: Run migrations
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
+          SECRET_KEY: s4d56g7h8j9k0k0k0k0k0
         run: |
           python manage.py migrate
 
       - name: Run tests
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
+          SECRET_KEY: s4d56g7h8j9k0k0k0k0k0
         run: |
           pytest --ds=event_planner.settings
