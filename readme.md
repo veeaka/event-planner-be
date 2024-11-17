@@ -13,6 +13,12 @@ cd event_planner
 sudo docker-compose up --build
 ```
 
+### run the following command to create database on docker postgres
+```bash
+sudo docker exec -it event_planner_db_1 psql -U postgres
+
+create database event_planner_db
+```
 ### This will:
 
 ####    Build the Docker images.
@@ -27,4 +33,11 @@ sudo docker-compose up --build
 #### To stop all running containers, use:
 ```bash
 sudo docker-compose down
+```
+
+### additionally 
+#### cmd to create superuser
+
+```bash
+docker-compose exec web python manage.py createsuperuser
 ```
