@@ -16,7 +16,7 @@ sudo docker-compose up --build
 ### This will:
 
 ####    Build the Docker images.
-####    Start the Django backend, React frontend, and PostgreSQL database.
+####    Start the Django backend and PostgreSQL database.
 
 ### 4. Access the Application
 ####    Backend: http://localhost:8000
